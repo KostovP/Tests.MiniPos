@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniPos", "MiniPos.csproj", "{054600AD-8122-4636-B0D2-ABBC57A96CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniPosTest", "..\MiniPosTest\MiniPosTest.csproj", "{35D29D51-DFAC-4B7B-ACC1-83E9739C4A58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{054600AD-8122-4636-B0D2-ABBC57A96CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054600AD-8122-4636-B0D2-ABBC57A96CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054600AD-8122-4636-B0D2-ABBC57A96CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054600AD-8122-4636-B0D2-ABBC57A96CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35D29D51-DFAC-4B7B-ACC1-83E9739C4A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D29D51-DFAC-4B7B-ACC1-83E9739C4A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35D29D51-DFAC-4B7B-ACC1-83E9739C4A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35D29D51-DFAC-4B7B-ACC1-83E9739C4A58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8C8F76D-E267-492C-B6E1-AC986CFBD9FE}
+	EndGlobalSection
+EndGlobal
