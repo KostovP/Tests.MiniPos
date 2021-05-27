@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 namespace MiniPos
 {
@@ -30,19 +31,31 @@ namespace MiniPos
             set { contractor = value; }
         }
 
+        [JsonIgnore]
         public decimal Total 
         { 
             get { return decimal.Round(Lines.Sum(line => line.Total), MPHelper.PREC_TOTAL_DOC); } 
         }
 
+        [JsonIgnore]
         public decimal TotalDiscount 
         { 
             get { return Total - TotalTarget; } 
         }
 
+        [JsonPropertyName("Total")]
         public decimal TotalTarget 
         { 
             get { return decimal.Round(Lines.Sum(line => line.TotalTarget), MPHelper.PREC_TOTAL_DOC); } 
+        }
+
+        [JsonIgnore]        
+        public decimal TotalTargetSingleQty
+        {
+            get
+            {
+                return Lines.Where(line => line.Qty == "1").Sum(line => line.TotalTarget);
+            }
         }
 
         public List<MPLine> Lines => lines;

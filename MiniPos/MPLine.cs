@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace MiniPos
@@ -76,10 +77,13 @@ namespace MiniPos
             }
         }
 
+        [JsonIgnore]
         public decimal Total { get { return qty * prc; } } // no need to round, because the qty is an int
 
+        [JsonIgnore]
         public decimal TotalDiscount { get { return Total - TotalTarget; } }
 
+        [JsonPropertyName("Total")]
         public decimal TotalTarget { get { return decimal.Round(Total * (1 - (discount / 100)), MPHelper.PREC_TOTAL_DOC_LINE); } }
 
     }

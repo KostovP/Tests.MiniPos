@@ -135,10 +135,16 @@ namespace MiniPos
                         {
                             MPHelper.ClearCurrentConsoleLine();
                             MPHelper.PrintLine(MPHelper.DOC_SECTION_SEP);
+                            MPHelper.PrintRow(AlignmentH.Right, 0, string.Format("Total: {0:F2}", doc.TotalTarget));
+                            MPHelper.PrintRow(AlignmentH.Right, 0, string.Format("Total single qty: {0:F2}", doc.TotalTargetSingleQty));
+                            MPHelper.PrintLine(MPHelper.DOC_SECTION_SEP);
 
-                            string jsonString = JsonSerializer.Serialize(doc);
-                            doc.Lines.Clear();
+                            string jsonString = JsonSerializer.Serialize(doc);                            
                             Console.WriteLine(jsonString);
+                            MPHelper.PrintLine(MPHelper.DOC_SECTION_SEP);
+                            
+                            doc.Lines.Clear();
+
                             MPHelper.PrintLine(MPHelper.DOC_SEP);
 
                             break; // breaks the lines loop
